@@ -1,8 +1,32 @@
-
+import Button from "./button"
+import Center from "./Center"
+import Input from "./input"
 
 const AuthForm = () => {
   return (
-    <div>AuthForm</div>
+    <div style={{ display: "flex", minHeight: "100vh", alignItems: "center"}}>
+       <div style={{width: "100%"}}>
+        <Center>
+            <div style={{fontSize: "30px", padding: "20px"}}>Log in to Trello</div>
+        </Center>
+
+        <Center>
+            Connect to Trello with:
+        </Center>
+
+        <Center>
+            <Input type="text" placeholder="Email" />
+        </Center>
+
+        <Center>
+            <Input type="password" placeholder="Password" />
+        </Center>
+        
+        <Center>
+            <Button leftIcon={<img style={{height : 20}} src="data:image/jpeg;base64,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"/>}>Log in</Button>
+        </Center>
+        </div>
+    </div>
   )
 }
 
